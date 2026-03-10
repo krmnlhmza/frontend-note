@@ -1,0 +1,239 @@
+HTML NOTE
+
+
+1. Sayfa İskeleti ve Head Ayarları (Arka Plan)
+Bu etiketler sayfanın iskeletini kurar ve tarayıcıya/arama motorlarına bilgi verir; sayfada doğrudan görünmezler.
+* <!DOCTYPE html>: Tarayıcıya belgenin güncel HTML5 standartlarında yazıldığını bildirir.
+* <html>: Tüm HTML kodlarını sarmalayan en dış (kök) elementtir.
+* <head>: Sayfanın ayarlarını, meta verilerini ve dış bağlantılarını barındırır.
+* <meta charset="UTF-8">: Türkçe dâhil tüm evrensel karakterlerin (ş, ç, ğ vb.) tarayıcıda bozulmadan görünmesini sağlar.
+* <meta name="viewport" content="...">: Sayfanın mobil cihazlarda ekran boyutuna göre düzgün ölçeklenmesini (responsive/duyarlı olmasını) sağlar.
+* <meta name="keywords" content="...">: Arama motorları (SEO) için sayfanın hangi anahtar kelimelerle ilgili olduğunu belirtir.
+* <meta name="description" content="...">: Google gibi arama motorlarında linkin hemen altında çıkan özet site açıklamasıdır.
+* <title>: Tarayıcının üst sekmesinde görünen sayfa başlığıdır.
+* <body>: Sayfanın kullanıcıya görünen tüm görsel ve metinsel içeriğinin bulunduğu ana gövdedir.
+2. Metin ve Düzen Biçimlendirme
+* <h1> - <h6>: Başlık etiketleridir. h1 en büyük ve SEO için en önemli başlıktır, seviye h6'ya kadar küçülür.
+* <p>: Paragraf oluşturur. Blok elementtir (bulunduğu satırı boydan boya kaplar).
+* <strong>: Metni kalın (bold) yapar ve anlamsal olarak önemini vurgular.
+* <mark>: Metnin arka planını sarıya boyayarak (fosforlu kalem gibi) dikkat çekici hale getirir.
+* <br>: Bir alt satıra geçmek (satır atlamak) için kullanılır.
+* <hr>: Sayfaya yatay bir ayırıcı çizgi çeker.
+* <center>: İçeriği ortalar (HTML5 ile yerini CSS'e bırakmıştır ancak temel ortalama işlemi yapar).
+3. Yapısal Elementler (Kutu Mimarisi)
+* <div>: Blok (block) elementtir. İçerikleri gruplandırmak, bağımsız kutular oluşturmak ve sayfa düzenini kurmak için kullanılır.
+* <span>: Satır içi (inline) elementtir. Sadece içindeki metin kadar yer kaplar. Bir paragrafın içindeki sadece birkaç kelimeyi gruplayıp renklendirmek/değiştirmek için kullanılır.
+4. Bağlantı (Link) ve Medya Elementleri
+* <a>: Başka bir siteye veya sayfaya link (bağlantı) verir.
+    * href: Gidilecek hedef web adresini tutar.
+    * target="_blank": Linke tıklandığında hedefin yeni bir sekmede açılmasını sağlar.
+* <img>: Sayfaya görsel ekler. Kapanış etiketi yoktur.
+    * src: Görselin bilgisayardaki veya internetteki dosya yoludur.
+    * alt: Görsel herhangi bir sebeple yüklenemezse veya görme engelli okuyucular için ekranda çıkacak yedek metindir.
+    * width / height: Görselin genişlik ve yükseklik değerleridir.
+* <video>: Sayfaya video ekler. controls parametresi oynat/durdur/ses ayarı gibi video tuşlarının görünmesini sağlar.
+    * <source>: Videonun kaynağını (src) ve formatını (type="video/mp4") belirtir.
+* <iframe>: Sayfanın içine dışarıdan başka bir web sayfasını, haritayı veya YouTube videosunu gömmek (embed) için kullanılır. frameborder çerçeve kalınlığını belirler.
+5. Listeler
+* <ul>: Sırasız liste oluşturur (maddeler içi dolu nokta gibi işaretlerle başlar).
+* <ol>: Sıralı liste oluşturur (maddeler sayı veya harf ile başlar). type="1" parametresi numaralandırmanın rakamla yapılacağını belirtir.
+* <li>: Liste elemanıdır. Hem ul hem de ol etiketlerinin içine maddeleri yazmak için kullanılır.
+6. Tablolar
+* <table>: Tablo oluşturmak için kullanılan ana sarmalayıcı çerçevedir.
+* <tr>: Tabloda yeni bir satır (Table Row) açar. (Notundaki border parametresi tablo kenarlığı içindir).
+* <th>: Tablo başlığı (Table Head) hücresidir. İçindeki metin otomatik olarak kalın ve ortalanmış yazılır.
+* <td>: Tablodaki standart veri (Table Data) hücresidir.
+* colspan: Belirtilen sayı kadar sütunu yatay olarak tek bir hücrede birleştirir (Örn: colspan="3").
+* rowspan: Belirtilen sayı kadar satırı dikey olarak tek bir hücrede birleştirir.
+7. Formlar ve Kullanıcı Girdileri (Inputlar)
+Kullanıcıdan veri almak (kayıt, giriş, analiz vs.) için kullanılır.
+* <form>: Tüm girdi elemanlarını kapsayan veri gönderim alanıdır.
+* <input>: Veri giriş kutusudur. type özelliği ile ne tür veri alınacağı belirlenir:
+    * type="text": Standart düz metin (isim, soyisim vb.) girişi.
+    * type="email": E-posta girişi (yazılan verinin içinde @ işareti olup olmadığını denetler).
+    * type="password": Şifre girişi (yazılan karakterleri güvenlik için nokta/yıldız olarak gizler).
+    * type="checkbox": Birden fazla seçeneğin aynı anda işaretlenebildiği onay kutusudur (tik atma).
+    * type="submit": Formdaki tüm verileri sunucuya göndermeye yarayan butondur.
+* Notlarında bahsettiğin diğer türler: radio (sadece tek bir seçeneğin seçilebildiği yuvarlak butonlar), file(bilgisayardan dosya yükleme), reset (formdaki tüm yazılanları sıfırlama), select (açılır liste menüsü oluşturma).
+* name: Girilen verinin arka planda hangi isimle (değişken olarak) yakalanacağını belirtir.
+* placeholder: Kutunun içinde silik/gri renkte görünen, kullanıcıya kutuya ne yazması gerektiğini anlatan ipucu metnidir.
+* value: Butonların veya inputların üzerinde varsayılan olarak yazılı gelen değerdir.
+* id: O form elemanına özel, sayfa içinde benzersiz (unique) bir kimlik verir. Seçim ve şekillendirme (CSS/JS) için kritiktir.
+
+
+CSS NOTE
+
+
+Metin ve Yazı İşlemleri (Text & Font Properties)
+Bu özellikler doğrudan yazının tipografisi ve okunabilirliği ile ilgilidir.
+* 1- color: Metnin kendi rengini belirler.
+* 2- background-color: Metnin (veya bulunduğu kutunun) arka plan rengini belirler.
+* 3- text-align: Metni kutu içinde sağa, sola, ortaya veya iki yana yaslı şekilde hizalar.
+* 4- font-weight: Metnin kalınlığını ayarlar. HTML'deki <b> ve <strong> etiketlerinin CSS'teki karşılığıdır.
+* 5- font-family: Kullanılacak yazı tipini (Arial, Times New Roman vb.) belirler.
+* 6- font-style: Metni italik (eğik) yapmak için kullanılır. HTML'deki <i> etiketinin karşılığıdır.
+* 7- text-transform: Metindeki karakterleri CSS ile zorla tamamen büyük harf, küçük harf veya sadece baş harfleri büyük formata dönüştürür.
+* 8- letter-spacing: Harfler arasındaki boşluk miktarını açar veya daraltır.
+* 9- text-decoration: Metnin altını, üstünü veya ortasını çizer. En çok linklerdeki (<a>) varsayılan alt çizgiyi kaldırmak için kullanılır.
+* 10- word-spacing: Kelimeler arasındaki boşluk miktarını belirler.
+CSS
+
+.detayli-metin {
+    /* 1 ve 2: Renkler */
+    color: white;                  
+    background-color: black;       
+
+    /* 3: Hizalama */
+    text-align: center;            /* left, right, center, justify */
+
+    /* 4, 5 ve 6: Font Ayarları */
+    font-weight: bold;             /* <b> ve <strong> gibi (normal, bold, 100-900 arası sayı) */
+    font-family: Arial, sans-serif; 
+    font-style: italic;            /* <i> gibi (normal, italic) */
+
+    /* 7: Dönüşüm */
+    text-transform: uppercase;     /* uppercase (HEPSİ BÜYÜK), lowercase (hepsi küçük), capitalize (Baş Harfler Büyük) */
+
+    /* 8 ve 10: Boşluklar */
+    letter-spacing: 2px;           /* Harfler arası 2 piksel açılır */
+    word-spacing: 5px;             /* Kelimeler arası 5 piksel açılır */
+
+    /* 9: Çizgiler */
+    text-decoration: underline;    /* underline (altı çizili), line-through (üstü çizili), none (çizgisiz) */
+}
+
+
+
+————————————————————————
+
+
+1. Temeller ve Çalışma Mantığı
+* 1- CSS Nedir: Basamaklı Stil Şablonları (Cascading Style Sheets). HTML ile kurduğumuz iskelete renk, boyut, konum ve estetik katmamızı sağlayan makyaj/giydirme dilidir.
+* 2- Projeye Dahil Etme (3 Yol): CSS kodlarını HTML'e bağlamanın yollarıdır.
+    * Inline (Satır içi): Doğrudan HTML etiketinin içine style="..." yazmak (Zorunlu kalmadıkça kullanılmaz).
+    * Internal (İçsel): HTML'in <head> etiketi arasına <style> açılarak yazılması.
+    * External (Dışsal): Ayrı bir .css uzantılı dosya oluşturup <link> etiketiyle HTML'e bağlamak (En profesyonel ve temiz yöntem).
+* 4- Yorum Satırı: /* buraya not yazılır */ şeklinde kullanılır. Kodu silmeden tarayıcıda çalışmasını engellemek veya koda açıklayıcı notlar düşmek için kullanılır.
+HTML
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Bu bir CSS yorum satırıdır. Kod çalışırken dikkate alınmaz. */
+        h1 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p style="color: red; font-size: 20px;">Bu satır içi stillendirilmiş bir paragraf.</p>
+</body>
+</html>
+2. HTML'i Yakalama Yöntemleri (Selectors - Seçiciler)
+HTML'deki bir elemanı şekillendirmek için önce CSS tarafında onu doğru yakalaman gerekir.
+* 3- CSS Selector: * Tag Name: Doğrudan etiket adıyla yakalama (Örn: p { color: red; } tüm paragrafları kırmızı yapar).
+    * Class (.nokta): HTML'de class="kutu" dediğin elemanı CSS'te .kutu { } diyerek yakalarsın. Birden çok elemanda aynı class kullanılabilir.
+    * ID (#kare): HTML'de id="baslik" dediğin benzersiz elemanı CSS'te #baslik { } diyerek yakalarsın. Sadece tek bir elemanda kullanılır.
+* 16- Nth Child: Liste veya tablo gibi arka arkaya sıralanan elemanların içinden spesifik olanı seçmektir. (Örn: "Sadece 3. satırı seç" veya "Sadece çift numaralı satırları gri yap").
+CSS
+
+/* Tag (Etiket) Seçici */
+p { color: red; }
+
+/* Class (Sınıf) Seçici - Başında nokta var */
+.kutu { background-color: yellow; }
+
+/* ID Seçici - Başında kare (hash) var */
+#baslik { font-size: 24px; }
+
+/* Nth-Child Seçici - Listedeki 3. elemanı veya çift(even)/tek(odd) elemanları seçme */
+li:nth-child(3) { color: green; }
+li:nth-child(even) { background-color: lightgray; }
+3. CSS'in Kalbi: Kutu Modeli (Box Model) ve Boyutlandırma
+Web tasarımında ekrandaki her şey görünmez bir dikdörtgen kutudur. Bu mantığı anlamak CSS'in %50'sini çözmektir.
+* 12- Box Model: Bir HTML elemanının içerik, iç boşluk (padding), kenarlık (border) ve dış boşluk (margin) katmanlarından oluşan yapıya verilen isimdir.
+* 9- Width ve Height: Kutunun genişliği (width) ve yüksekliğidir (height). Değerler px (sabit piksel) veya % (yüzde) olarak verilebilir. % kullanmak, ekran küçüldüğünde (mobilde vs.) elemanın da ekrana oranla küçülmesini (Responsive/Esnek olmasını) sağlar.
+* 11- Padding (İç Boşluk): Kutunun içindeki yazı/içerik ile kutunun kendi kenarları (border) arasındaki nefes alma boşluğudur.
+* 10- Margin (Dış Boşluk): Kutunun, etrafındaki diğer kutularla/elemanlarla arasındaki itme mesafesidir.
+* 8- Border ve Radius: Border, kutunun kenar çizgilerinin kalınlığı, rengi ve tipidir (düz, kesik kesik vs). Border-Radius ise bu sivri kenarları yumuşatarak ovalleştirmeyi veya tam yuvarlak yapmayı sağlar.
+CSS
+
+.benim-kutum {
+    width: 300px;        /* Genişlik */
+    height: 50%;         /* Yükseklik (içinde bulunduğu alanın %50'si) */
+    padding: 20px;       /* İç boşluk: Yazı ile kenarlık arası mesafe */
+    margin: 15px;        /* Dış boşluk: Diğer kutuları 15px uzağa iter */
+    
+    border: 2px solid black;  /* Kenarlık: 2 piksel, düz çizgi, siyah renk */
+    border-radius: 10px;      /* Kenar yumuşatma: Köşeleri hafif ovalleştirir */
+}
+4. Eleman Davranışları ve Konumlandırma
+* 6 & 13- Div, Block ve Inline Element Farkı: * Block: Sayfada soldan sağa tüm satırı kaplar, yanına başka eleman almaz (Örn: div, h1, p).
+    * Inline: Sadece içindeki yazı kadar yer kaplar, yan yana dizilirler. Width/height veya alt/üst margin değerlerini kabul etmezler (Örn: span, a).
+* 14- Display: Bu varsayılan davranışları ezmeye yarar. Bir inline elemana display: block diyerek satırı kaplamasını veya display: inline-block diyerek hem yan yana durmasını hem de width/height değerleri alabilmesini sağlayabilirsin.
+* 21- Position: Elemanları ekranda serbestçe veya belirli bir yere göre sabitlemek için kullanılır (relative, absolute, fixed, sticky). Örneğin ekran kaydırıldığında üst menünün hep yukarıda yapışık kalması fixed ile yapılır.
+* 22- Z-Index: Sayfa derinliğini ifade eder. Eğer iki kutu Position ile üst üste binerse, z-index değeri yüksek olan kutu kullanıcıya daha yakın (en üstte) görünür.
+* 23- Overflow: Kutunun içine sığmayan ve taşan uzun içeriklerin (metin/resim) ne olacağını belirler. Taşan kısmı gizleyebilir (hidden) veya kutunun içine kaydırma çubuğu (scroll) ekleyebilirsin.
+CSS
+
+.inline-elemani-blok-yap {
+    display: block; /* Artık tüm satırı kaplar ve width/height alabilir */
+}
+
+.sabit-menu {
+    position: fixed; /* Ekran kaydırılsa da olduğu yerde kalır */
+    top: 0;          /* Ekranın en tepesine yapıştır */
+    z-index: 999;    /* Diğer tüm elemanların üstünde görünsün */
+}
+
+.tasan-kutu {
+    width: 100px;
+    height: 100px;
+    overflow: scroll; /* İçindeki yazı 100px'i aşarsa kaydırma çubuğu çıkar */
+}
+5. Görsel Şekillendirme
+* 5- Renkler: İsimle ("red"), HEX koduyla ("#FF0000") veya RGB/RGBA ile (Kırmızı, Yeşil, Mavi karışımı ve saydamlık oranı) renk atama yöntemleri.
+* 7- Arkaplan (Background): Kutuya arka plan rengi (background-color) vermek veya arka plana bir görsel (background-image) yerleştirip bu görselin tekrar edip etmeyeceğini, boyutunu ayarlamak.
+* 15- Text İşlemleri: Yazının tipi (font-family), boyutu (font-size), kalınlığı (font-weight), satır arası boşluğu ve sağa/sola/ortaya hizalanması (text-align) gibi tipografik ayarlar.
+CSS
+
+.metin-gorseli {
+    color: #333333;             /* Yazı rengi (HEX kodu ile koyu gri) */
+    font-family: Arial, sans-serif; /* Yazı tipi */
+    font-size: 18px;            /* Yazı büyüklüğü */
+    font-weight: bold;          /* Yazı kalınlığı (bold, normal vs.) */
+    text-align: center;         /* Yazıyı ortala (left, right, center) */
+
+    background-color: rgba(255, 0, 0, 0.5); /* Arkaplan: %50 saydam kırmızı */
+    background-image: url('resim.jpg');     /* Arkaplana görsel ekleme */
+    background-size: cover;                 /* Görseli kutunun tamamına sığdır */
+}
+6. HTML Bileşenlerini CSS ile Özelleştirme
+* 17- Icon: FontAwesome gibi dış kütüphaneleri projeye dahil edip sayfalara vektörel ikonlar (ev, sepet, arama ikonu vs.) eklemek. (Not: CSS kodu değildir, HTML'e <script> veya <link> ile eklenir, class ile çağrılır: <i class="fa fa-home"></i>)
+* 18, 19, 20- Link, List, Table CSS: HTML'in çirkin varsayılan ayarlarını temizlemek. Örneğin linklerin altındaki mavi çizgiyi kaldırmak (text-decoration: none), madde işaretlerindeki yuvarlakları silmek (list-style-type: none) ve tabloları daha modern çizgilerle renklendirmek.
+* 24- Navigation Bars: <ul> ve <li> etiketlerini yatay (horizontal) veya dikey (vertical) hale getirerek sitenin üst menüsünü (Navbar) tasarlamak.
+* 25- Dropdown: Menüdeki bir elemanın üzerine fare ile gelindiğinde (hover durumunda) display: none olan alt kutunun display: block yapılarak aşağı doğru açılır menü efekti verilmesi.
+CSS
+
+/* Linkin alt çizgisini kaldırma ve fareyle üstüne gelince (hover) rengini değiştirme */
+a { text-decoration: none; color: blue; }
+a:hover { color: red; }
+
+/* Listenin başındaki noktaları kaldırma */
+ul { list-style-type: none; padding: 0; }
+
+/* Basit bir Dropdown (Açılır Menü) Mantığı */
+.alt-menu {
+    display: none; /* Normalde gizli */
+}
+.ana-menu-elemani:hover .alt-menu {
+    display: block; /* Fare ana menünün üstüne gelince alt menüyü göster */
+}
+
+/* Tablo çizgilerini tek bir çizgi halinde birleştirme */
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid black; padding: 8px; }
+
